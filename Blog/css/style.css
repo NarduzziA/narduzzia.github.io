@@ -1,0 +1,126 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+*{ 
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width: 56.25rem;
+}
+
+/* layout */
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1.25rem;
+}
+
+article { 
+
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside { 
+    grid-column: 2 / 4;
+    grid-row: 1;
+    border-left: 1px solid black;
+    padding-left: 1rem;
+}
+
+
+.subsection {
+    display: flex;
+}
+
+/* Links and nv */
+
+nav a { 
+display: inline-block;
+    padding: 1.25rem 2rem; 
+}
+nav { 
+border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* Images and figures */
+
+img { 
+width: 100%;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+}
+
+/* imported typfaces */ 
+@font-face {
+    font-family: "josefinslab";
+    src: url("../fonts/josefinslabe-regular.ttf") format('truetype')
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: "montserrat";
+    src: url("../fonts/montserrat-regular.ttf") format('truetype')
+    font-weight: normal;
+    font-style: normal;
+}
